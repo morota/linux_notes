@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./stylesheets/styles.css">
+<link rel="stylesheet" href="./stylesheets/pygment_trac.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Terminal multiplexer</title>
+</head>
+<body>
+<p class="menublock"><a href="./index.html">Back</a></p>
+
+<h1>Terminal multiplexer</h1>
+
+
+
+
+<br>
+<br>
+<h3>GNU Screen</h3>
+<p>
+If you want to run multiple jobs at the same time, you may think you need to connect over multiple ssh sessions. 
+In the case like this, GNU screen comes in handy. In short, screen provides multiple windows within a single ssh session. 
+</p>
+<ul>
+<li>screen: fire up screen </li>
+<li>Ctrl + a + c: create a new window</li>
+<li>Ctrl + a + n: move to the next window</li>
+<li>Ctrl + a + p: move to the previous window</li>
+<li>Ctrl + a + [number]: move to the window [number]</li>
+<li>Ctrl + a + space: move to the next window</li>
+<li>Ctrl + a + w: list currently available windows (* and - denote current and previous windows respectively)</li>
+<li>Ctrl + a + A: change a window title</li>
+<li>Ctrl + a + S: split a window horizontaly</li>
+<li>Ctrl + a + tab: move to next region on a window</li>
+<li>Ctrl + a + Q: delete all regions but the current one</li>
+<li>Ctrl + a + X: delete the current region</li>
+<li>Ctrl + a + k: kill current window</li>
+</ul>
+<p>  
+GNU Screen is also a great choice if you need to switch your workplace while being a ssh session on a laptop. Say I'm in my office and 
+running R and bash scripts in GNU Screen. Then detach it with Ctrl + a + d and close the ssh connection. 
+When you get back to your apartment, you can resume your work by reconnecting to the server again and type screen -r. 
+</p>
+<ul>
+<li>screen -ls (-list):list currently running screens and its IDs</li>
+<li>Ctrl + a + d: detach</li>
+<li>Ctrl + a + d: detach</li>
+<li>screen -r: restore</li>
+<li>screen -x ID: restoring specific screen</li>
+</ul>
+<p>
+Further, GNU Screen allows us to share a screen. For example, you are connected to a server and running GNU screen from a desktop. 
+To share a screen with your laptop firts loging to the server and issue screen -ls to see the ID. 
+Then just type  by screen -x ID. 
+</p>
+
+
+
+
+
+
+
+</body>
+</html>
