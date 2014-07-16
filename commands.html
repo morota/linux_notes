@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./stylesheets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Linux commands</title>
+</head>
+<body>
+<p class="menublock"><a href="./index.html">Back</a></p>
+
+<h1>Useful Linux commands</h1>
+
+
+
+
+<br>
+<br>
+<h3>Check disk usage</h3>
+<p>
+</p>
+<ul>
+<li><code>du -h --max-depth=1</code></li>
+</ul>
+
+
+
+<h3>Count lines in a file</h3>
+<p>
+</p>
+<ul>
+<li><code>wc -l myfile.txt</code></li>
+</ul>
+
+<h3>Count columns in a file</h3>
+<p>
+Space-delimited file
+</p>
+<ul>
+<li><code>awk -F' ' '{print NF; exit}' myfile.txt</code></li>
+</ul>
+<p>
+CSV file
+</p>
+<ul>
+<li><code>awk -F',' '{print NF; exit}' myfile.csv</code></li>
+</ul>
+<p>
+Tab-delimited file
+</p>
+<ul>
+<li><code>awk -F'\t' '{print NF; exit}' myfile.txt</code></li>
+</ul>
+
+<h3>Synchronize files and directories</h3>
+<p>
+Local machine to server
+</p>
+<ul>
+<li><code>rsync -auvz -e ssh --delete /home/gota/research gota@myserver.org:/home/gota/backup</code></li>
+</ul>
+<p>
+Server to local machine 
+</p>
+<ul>
+<li><code>rsync -auvz -e ssh --delete gota@myserver.org:/home/gota/backup /home/gota/research</code></li>
+</ul>
+
+
+<h3>Copy files from one location to another</h3>
+<p>
+</p>
+<ul>
+<li><code> scp myfile.txt gota@myserver.org:/home/gota/proj1/</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
