@@ -100,7 +100,15 @@ li.comment{
     padding-left:1em;
 }
 
+ul {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+
+
 li{
+    margin: 3pt 0;
     line-height:1.5;
 }
 
