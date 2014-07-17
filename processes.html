@@ -28,7 +28,13 @@ To see how much memory currently active processes are occupying, type
 <ul>
 <li><code>ps aux --sort user,-vsz </code></li>
 </ul>
-
+<p>
+To find out how much SWAP is being used by a process, 
+</p>
+<ul>
+<li><code>grep VmSwap /proc/15181/status </code></li>
+</ul>
+if process ID (PID) is 15181. 
 
 
 
